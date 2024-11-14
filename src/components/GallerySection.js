@@ -21,13 +21,8 @@ const Section = styled.section`
   min-height: 100vh;
   padding: 80px 1px;
   background-color: #fff;
-  touch-action: pan-y pinch-zoom;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  overscroll-behavior: none;
+  touch-action: pan-y;
 `;
 
 const Title = styled.h2`
