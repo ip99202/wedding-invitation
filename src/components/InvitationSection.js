@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 const Section = styled.section`
   min-height: 100vh;
-  padding: 60px 20px;
+  padding: 80px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;

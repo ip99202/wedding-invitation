@@ -20,7 +20,7 @@ const Container = styled.div`
   background: inherit;
   
   & > section {
-    // margin-bottom: -120px;
+    margin-bottom: -120px;
     background-color: rgba(255, 255, 255, 0.7);
   }
 
@@ -32,17 +32,17 @@ const Container = styled.div`
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect(() => {
-    const setVh = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
+  // useEffect(() => {
+  //   const setVh = () => {
+  //     const vh = window.innerHeight * 0.01;
+  //     document.documentElement.style.setProperty('--vh', `${vh}px`);
+  //   };
 
-    setVh();
-    window.addEventListener('resize', setVh);
+  //   setVh();
+  //   window.addEventListener('resize', setVh);
 
-    return () => window.removeEventListener('resize', setVh);
-  }, []);
+  //   return () => window.removeEventListener('resize', setVh);
+  // }, []);
 
   useEffect(() => {
     const minLoadingTime = new Promise(resolve => 

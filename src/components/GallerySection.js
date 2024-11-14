@@ -19,7 +19,7 @@ import img9 from '../public/images/7E0A1710.jpeg';
 
 const Section = styled.section`
   min-height: 100vh;
-  padding: 60px 1px;
+  padding: 80px 1px;
   background-color: #fdfdf5;
   overscroll-behavior: none;
   touch-action: pan-y;
