@@ -20,7 +20,7 @@ const Container = styled.div`
   background: inherit;
   
   & > section {
-    margin-bottom: -120px;
+    // margin-bottom: -120px;
     background-color: rgba(255, 255, 255, 0.7);
   }
 

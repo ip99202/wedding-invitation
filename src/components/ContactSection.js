@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 
 const Section = styled.section`
   min-height: auto;
-  padding: 80px 20px;
+  padding: 60px 20px;
   background-color: #fdfdf5;
 `;
 
