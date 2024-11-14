@@ -20,10 +20,6 @@ const FooterContainer = styled.section`
   position: relative;
 `;
 
-const FooterText = styled.p`
-  font-size: 18px;
-  margin: 0;
-`;
 
 const CopyrightText = styled.div`
   position: absolute;
@@ -38,7 +34,6 @@ const CopyrightText = styled.div`
 function FooterSection() {
   return (
     <FooterContainer>
-      {/* <FooterText>여러분을 초대합니다!</FooterText> */}
       <CopyrightText>© 2024 HAN JANG HEE.</CopyrightText>
     </FooterContainer>
   );

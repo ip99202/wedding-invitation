@@ -1,8 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-// import arthall from '../public/images/상록아트홀_약도.jpg';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -106,37 +105,6 @@ const MapButton = styled(Button)`
   }
 `;
 
-const MapImageButton = styled(Button)`
-  margin-top: 20px;
-  margin-bottom: 30px;
-`;
-
-const Modal = styled.div`
-  display: ${props => props.show ? 'flex' : 'none'};
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-`;
-
-const ModalContent = styled.div`
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 90%;
-  max-height: 90%;
-  overflow: auto;
-`;
-
-const MapImage = styled.img`
-  max-width: 100%;
-  height: auto;
-`;
 
 function LocationSection() {
   const mapRef = useRef(null);
@@ -144,7 +112,6 @@ function LocationSection() {
     threshold: 0.1,
     triggerOnce: true
   });
-  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const loadKakaoMap = () => {
@@ -202,9 +169,6 @@ function LocationSection() {
             상록회관 상록아트홀 5층 아트홀
           </Address>
           
-          {/* <MapImageButton onClick={() => setShowModal(true)}>
-            약도 이미지로 보기
-          </MapImageButton> */}
 
           <div>
             <MapButton 
@@ -256,11 +220,6 @@ function LocationSection() {
         </InfoContainer>
       </Container>
 
-      {/* <Modal show={showModal} onClick={() => setShowModal(false)}>
-        <ModalContent onClick={e => e.stopPropagation()}>
-          <MapImage src={arthall} alt="상록아트홀 약도" />
-        </ModalContent>
-      </Modal> */}
     </Section>
   );
 }
