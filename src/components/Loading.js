@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
@@ -54,6 +54,17 @@ const Letter = styled.span`
 
 function Loading() {
   const [text] = useState('장희, 유라 결혼합니다');
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 3000); // 3초 후 로딩화면 사라짐
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!isVisible) return null;
 
   return (
     <LoadingWrapper>

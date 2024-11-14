@@ -37,6 +37,13 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
   }
 
   a {
@@ -54,6 +61,13 @@ const GlobalStyle = createGlobalStyle`
   #root {
     min-height: 100vh;
     position: relative;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
 `;
 
