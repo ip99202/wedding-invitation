@@ -4,14 +4,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Section = styled.section`
-  min-height: 80vh;
+  min-height: 100vh;
   padding: 80px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #fff;
+  background-color: #fdfdf5;
 `;
 
 const InvitationText = styled(motion.div)`

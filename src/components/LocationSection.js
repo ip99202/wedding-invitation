@@ -6,7 +6,7 @@ import { useInView } from 'react-intersection-observer';
 const Section = styled.section`
   min-height: 100vh;
   padding: 80px 20px;
-  background-color: #fff;
+  background-color: #fdfdf5;
 `;
 
 const Title = styled.h2`
