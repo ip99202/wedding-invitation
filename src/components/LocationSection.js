@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import arthall from '../public/images/상록아트홀_약도.jpg';
+// import arthall from '../public/images/상록아트홀_약도.jpg';
 
 const Section = styled.section`
   min-height: 100vh;
@@ -256,11 +256,11 @@ function LocationSection() {
         </InfoContainer>
       </Container>
 
-      <Modal show={showModal} onClick={() => setShowModal(false)}>
+      {/* <Modal show={showModal} onClick={() => setShowModal(false)}>
         <ModalContent onClick={e => e.stopPropagation()}>
           <MapImage src={arthall} alt="상록아트홀 약도" />
         </ModalContent>
-      </Modal>
+      </Modal> */}
     </Section>
   );
 }
