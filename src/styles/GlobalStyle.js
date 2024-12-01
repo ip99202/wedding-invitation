@@ -20,10 +20,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Gabia Gosran', sans-serif;
   }
 
-  *:lang(en) {
-    font-family: 'Cinzel', serif;
-    font-weight: 600;
-  }
+  // *:lang(en) {
+  //   font-family: 'Cinzel', serif;
+  //   font-weight: 600;
+  // }
 
   html, body {
     height: 100%;

@@ -4,9 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Section = styled.section`
-  min-height: auto;
-  padding: 80px 20px;
+  height: 700px;
+  padding: 150px 20px;
   background-color: #fdfdf5;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Title = styled.h2`
@@ -15,6 +16,7 @@ const Title = styled.h2`
   text-align: center;
   margin-bottom: 40px;
   color: #333;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Container = styled(motion.div)`
@@ -23,7 +25,7 @@ const Container = styled(motion.div)`
 `;
 
 const AccordionHeader = styled.div`
-  background-color: #f9f9f9;
+  background-color: #f0ede2;
   padding: 15px;
   border-radius: 10px;
   display: flex;
@@ -31,14 +33,19 @@ const AccordionHeader = styled.div`
   align-items: center;
   cursor: pointer;
   margin-bottom: ${props => props.$isOpen ? '10px' : '0'};
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const AccordionContent = styled(motion.div)`
   background-color: #fff;
   overflow: hidden;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const AccountCard = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 15px;
   border-bottom: 1px solid #eee;
   
@@ -47,23 +54,29 @@ const AccountCard = styled.div`
   }
 `;
 
-const AccountName = styled.p`
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 8px;
+const AccountInfo = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
-const AccountNumber = styled.p`
-  font-size: 16px;
+const AccountDetails = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #666;
+`;
+
+const AccountName = styled.p`
+  font-size: 13px;
   color: #333;
-  margin-bottom: 10px;
+  margin-top: 5px;
 `;
 
 const Button = styled.button`
-  padding: 8px 16px;
+  padding: 5px 10px;
   border: none;
-  border-radius: 20px;
-  background-color: #f3d4d4;
+  border-radius: 5px;
+  background-color: #f0ede2;
   color: #333;
   font-size: 14px;
   cursor: pointer;
@@ -112,7 +125,7 @@ function ContactSection() {
   const handleCopy = async (text, name) => {
     try {
       await navigator.clipboard.writeText(text);
-      setCopyMessage(`${name}님의 계좌번호가 복사되었습니다`);
+      setCopyMessage(`계좌번호가 복사되었습니다`);
       setTimeout(() => setCopyMessage(''), 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
@@ -160,10 +173,14 @@ function ContactSection() {
                 >
                   {accounts[side].map((item, index) => (
                     <AccountCard key={index}>
-                      <AccountName>{item.name}</AccountName>
-                      <AccountNumber>{item.account}</AccountNumber>
+                      <AccountInfo>
+                        <AccountDetails>
+                          {item.account.split(' ')[0]} | {item.account.split(' ')[1]}
+                        </AccountDetails>
+                        <AccountName>{item.name}</AccountName>
+                      </AccountInfo>
                       <Button onClick={() => handleCopy(item.account, item.name)}>
-                        계좌번호 복사
+                        복사
                       </Button>
                     </AccountCard>
                   ))}

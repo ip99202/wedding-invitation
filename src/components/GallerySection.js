@@ -18,11 +18,12 @@ import img8 from '../public/images/7E0A1681.jpeg';
 import img9 from '../public/images/7E0A1710.jpeg';
 
 const Section = styled.section`
-  min-height: 100vh;
-  padding: 80px 1px;
+  height: 800px;
+  padding: 150px 10px;
   background-color: #fdfdf5;
   overscroll-behavior: none;
   touch-action: pan-y;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Title = styled.h2`
@@ -31,6 +32,7 @@ const Title = styled.h2`
   text-align: center;
   margin-bottom: 40px;
   color: #333;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const SliderWrapper = styled.div`

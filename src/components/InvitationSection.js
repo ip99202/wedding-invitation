@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Section = styled.section`
-  min-height: 100vh;
+  height: 800px;
   padding: 80px 20px;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,7 @@ const Section = styled.section`
   align-items: center;
   text-align: center;
   background-color: #fdfdf5;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const InvitationText = styled(motion.div)`
@@ -19,6 +20,7 @@ const InvitationText = styled(motion.div)`
   margin: 0 auto;
   line-height: 2;
   word-break: keep-all;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Title = styled.h2`
@@ -26,6 +28,7 @@ const Title = styled.h2`
   font-weight: 300;
   margin-bottom: 40px;
   color: #333;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Message = styled.p`
@@ -33,13 +36,15 @@ const Message = styled.p`
   font-weight: 300;
   color: #666;
   margin-bottom: 30px;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Names = styled.p`
-  font-size: 16px;
+  font-size: 15px;
   margin-top: 40px;
   line-height: 1.8;
   color: #333;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const fadeInUpVariants = {
@@ -81,8 +86,8 @@ function InvitationSection() {
           축복해 주시면 감사하겠습니다.
         </Message>
         <Names>
-          한상표 · 이혜영의 장남 장희<br/>
-          복진규 · 염연숙의 장녀 유라
+          한상표 · 이혜영<span style={{ fontWeight: 'normal' }}> 의 장남</span> 장희<br/>
+          복진규 · 염연숙<span style={{ fontWeight: 'normal' }}> 의 장녀</span> 유라
         </Names>
       </InvitationText>
     </Section>

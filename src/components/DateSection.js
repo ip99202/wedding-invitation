@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Section = styled.section`
-  min-height: 100vh;
+  height: 800px;
   padding: 80px 20px;
   display: flex;
   flex-direction: column;
@@ -12,6 +12,7 @@ const Section = styled.section`
   align-items: center;
   text-align: center;
   background-color: #fff;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const DateContainer = styled(motion.div)`
@@ -25,6 +26,7 @@ const WeddingDate = styled.div`
   color: #333;
   margin-bottom: 8px;
   font-weight: 300;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const WeddingTime = styled.div`
@@ -32,6 +34,7 @@ const WeddingTime = styled.div`
   color: #666;
   margin-bottom: 40px;
   font-weight: 300;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Calendar = styled.div`
@@ -39,6 +42,7 @@ const Calendar = styled.div`
   padding: 20px 0;
   margin: 30px 0;
   width: 100%;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const WeekDays = styled.div`
@@ -47,6 +51,7 @@ const WeekDays = styled.div`
   margin-bottom: 15px;
   font-size: 14px;
   text-align: center;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Days = styled.div`
@@ -55,6 +60,7 @@ const Days = styled.div`
   gap: 10px 0;
   font-size: 15px;
   text-align: center;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const CalendarDay = styled.div`
@@ -69,7 +75,7 @@ const CalendarDay = styled.div`
   margin: 0 auto;
 
   ${props => props.$isWeddingDay && `
-    background-color: #FFD7DD;
+    background-color: #90ee90;
     border-radius: 50%;
   `}
 `;
@@ -97,7 +103,8 @@ const CountdownItem = styled.div`
   .number {
     font-size: 20px;
     font-weight: 500;
-    color: #333;
+    color: #333; 
+    font-family: 'Gabia Gosran', serif;
   }
   
   .label {
@@ -112,6 +119,7 @@ const Message = styled.div`
   font-size: 14px;
   color: #666;
   margin-top: 20px;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 function DateSection() {
@@ -186,7 +194,7 @@ function DateSection() {
         <WeddingTime>일요일 오전 12시 20분</WeddingTime>
         
         <Calendar>
-          <WeekDays>
+          <WeekDays style={{ fontFamily: 'Gabia Gosran' }}>
             {weekDays.map((day, index) => (
               <div 
                 key={day} 
@@ -208,7 +216,7 @@ function DateSection() {
                   color: day.isWeekend ? '#FF8A98' : '#333'
                 }}
               >
-                {day.day}
+                {day.isWeddingDay ? <span style={{ color: 'green' }}>{day.day}</span> : day.day}
               </CalendarDay>
             ))}
           </Days>
@@ -218,22 +226,22 @@ function DateSection() {
           <CountdownGrid>
             <CountdownItem>
               <div className="number">{countdown.days}</div>
-              <div className="label">DAYS</div>
+              <div className="label" style={{ fontFamily: 'Gabia Gosran'}}>DAYS</div>
             </CountdownItem>
             <CountdownItem>
               <div className="number">{countdown.hours}</div>
-              <div className="label">HOUR</div>
+              <div className="label" style={{ fontFamily: 'Gabia Gosran'}}>HOUR</div>
             </CountdownItem>
             <CountdownItem>
               <div className="number">{countdown.minutes}</div>
-              <div className="label">MIN</div>
+              <div className="label" style={{ fontFamily: 'Gabia Gosran'}}>MIN</div>
             </CountdownItem>
             <CountdownItem>
               <div className="number">{countdown.seconds}</div>
-              <div className="label">SEC</div>
+              <div className="label" style={{ fontFamily: 'Gabia Gosran'}}>SEC</div>
             </CountdownItem>
           </CountdownGrid>
-          <Message>장희, 유라의 결혼식이 {countdown.days}일 남았습니다.</Message>
+          <Message>장희 💚 유라의 결혼식이 <span style={{ color: 'green' }}>{countdown.days}</span>일 남았습니다.</Message>
         </CountdownContainer>
       </DateContainer>
     </Section>

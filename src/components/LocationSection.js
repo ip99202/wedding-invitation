@@ -4,18 +4,18 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
 const Section = styled.section`
-  min-height: 100vh;
-  padding: 80px 20px;
+  height: 1300px;
+  padding: 150px 20px;
   background-color: #fdfdf5;
 `;
 
 const Title = styled.h2`
   font-size: 24px;
-  // font-weight: 300;
+  font-weight: 300;
   text-align: center;
   margin-bottom: 40px;
   color: #333;
-  font-family: 'GabiaGothic', sans-serif;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Container = styled.div`
@@ -41,7 +41,7 @@ const VenueName = styled.h3`
   font-weight: 500;
   margin-bottom: 20px;
   color: #333;
-  font-family: 'GabiaGothic', sans-serif;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Address = styled.p`
@@ -49,7 +49,7 @@ const Address = styled.p`
   color: #666;
   margin-bottom: 20px;
   line-height: 1.6;
-  font-family: 'GabiaGothic', sans-serif;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const Button = styled.a`
@@ -62,7 +62,7 @@ const Button = styled.a`
   text-decoration: none;
   font-size: 14px;
   transition: background-color 0.3s;
-  font-family: 'GabiaGothic', sans-serif;
+  font-family: 'Gabia Gosran', serif;
 
   &:hover {
     background-color: #efc4c4;
@@ -83,15 +83,15 @@ const DirectionTitle = styled.h4`
   font-weight: 500;
   color: #333;
   margin-bottom: 15px;
-  font-family: 'GabiaGothic', sans-serif;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const DirectionText = styled.p`
-  font-size: 15px;
+  font-size: 14px;
   color: #666;
   line-height: 1.8;
   margin-bottom: 10px;
-  font-family: 'GabiaGothic', sans-serif;
+  font-family: 'Gabia Gosran', serif;
 `;
 
 const MapButton = styled(Button)`
@@ -191,31 +191,31 @@ function LocationSection() {
             <DirectionSection>
               <DirectionTitle>지하철 이용 시</DirectionTitle>
               <DirectionText>
-                • 2호선 / 분당선 "선릉역" 5번출구 도보 5분<br />
-                • 서울버스 운행 (수서운행): 선릉역 5번 출구
+                • 선릉역 5번출구 (2호선, 수인분당선)<br />
+                • 선릉역 5번 출구 앞 셔틀버스 운행
               </DirectionText>
             </DirectionSection>
 
             <DirectionSection>
               <DirectionTitle>버스 이용 시</DirectionTitle>
               <DirectionText>
-                • KT 강남지사 하차<br />
-                • 간선버스(파랑): 141 (도봉산), 242 (종랑, 신내역), 361 (여의도)<br />
-                • 한국기술센터, 상록회관 하차<br />
-                • 간선버스(파랑): 146 (상계동), 341 (하남), 360 (송파), 740 (덕은동)<br />
-                • 지선버스(초록): 1100 (차산리), 1700 (연대농장입구, 도곡리), 2000 (천변리), 7007 (광릉내)<br />
-                • 급행버스(빨강): 8001 (대성리)
+                • KT 강남지사 정류장<br />
+                • 간선버스(파랑): 141, 242, 361<br /><br />
+                • 한국기술센터, 상록회관 정류장<br />
+                • 간선버스(파랑): 146, 341, 360, 740<br />
+                • 지선버스(초록): 1100, 1700, 2000, 7007<br />
+                • 급행버스(빨강): 8001
               </DirectionText>
             </DirectionSection>
 
-            <DirectionSection>
+            {/* <DirectionSection>
               <DirectionTitle>자가용 이용 시</DirectionTitle>
               <DirectionText>
                 • 네비게이션 이용 시: "서울상록회관" 또는 "서울시 강남구 언주로 508" 입력<br />
                 • 경부고속도로: 양재IC진입하시어 양재대로에서 매봉터널,<br />
                   강남세브란스병원 방면으로 진입하여 직진
               </DirectionText>
-            </DirectionSection>
+            </DirectionSection> */}
           </DirectionsContainer>
         </InfoContainer>
       </Container>

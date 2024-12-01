@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import mainImage from '../public/images/IMG_00688-2.jpeg'; // 메인 이미지 import
 
 const Section = styled.section`
-  height: 95vh;
+  height: 900px;
   width: 100%;
   position: relative;
   display: flex;
@@ -50,7 +50,7 @@ const MainDate = styled.h1`
   font-weight: 800;
   letter-spacing: 2px;
   margin-bottom: 4px;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Gabia Gosran', serif;
   color: #006F46;
 `;
 
@@ -111,7 +111,7 @@ function MainSection() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <Names>한장희 · 복유라</Names>
+        <Names>한장희  ·  복유라</Names>
         <DateTime>2025년 3월 16일 일요일 오후 12시 20분</DateTime>
         <Location>상록아트홀 5F, 아트홀</Location>
       </InfoContainer>

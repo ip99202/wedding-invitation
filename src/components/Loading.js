@@ -53,7 +53,7 @@ const Letter = styled.span`
 `;
 
 function Loading() {
-  const [text] = useState('장희, 유라 결혼합니다');
+  const [text] = useState('장희❤️유라 결혼합니다');
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {

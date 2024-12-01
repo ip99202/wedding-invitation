@@ -14,7 +14,7 @@ const FooterContainer = styled.section`
   justify-content: center;
   color: white;
   text-align: center;
-  font-family: 'GabiaGosran', sans-serif;
+  font-family: 'Gabia Gosran', sans-serif;
   mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.5) 80%, transparent 100%);
   -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0.5) 90%, transparent 100%);
   position: relative;
@@ -26,9 +26,9 @@ const CopyrightText = styled.div`
   bottom: 10px;
   width: 100%;
   text-align: center;
-  font-size: 13px;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'GabiaGosran', sans-serif;
+  font-family: 'Gabia Gosran', sans-serif;
 `;
 
 function FooterSection() {
