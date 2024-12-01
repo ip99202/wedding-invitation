@@ -1,13 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import kakaoMapLogo from '../public/images/kakaomap_basic.png';  // 카카오맵 로고 import
 import naverMapLogo from '../public/images/navermap.png';  // 네이버맵 로고 import
 import tmapLogo from '../public/images/tmap.png';  // 티맵 로고 import
+import trafficControlImage from '../public/images/traffic_control.jpg';  // 교통 통제 이미지 import
 
 const Section = styled.section`
-  height: 1350px;
+  height: 1850px;
   padding: 150px 20px;
   background-color: #fdfdf5;
   touch-action: pan-y;  // 수직(y축) 스크롤만 허용
@@ -98,12 +99,166 @@ const Logo = styled.img`
   margin-right: 8px;  // 텍스트와의 간격
 `;
 
+const TrafficControlContainer = styled.div`
+  margin: 40px 0;
+  padding: 15px;
+  background-color: #fff5f5;
+  border-radius: 10px;
+  border: 1px solid #ffe3e3;
+`;
+
+const TrafficControlTitle = styled.h4`
+  font-size: 18px;
+  font-weight: 500;
+  color: #e03131;
+  margin-bottom: 15px;
+  text-align: center;
+`;
+
+const TrafficControlImage = styled.img`
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+`;
+
+const TrafficControlText = styled.p`
+  font-size: 14px;
+  color: #495057;
+  line-height: 1.8;
+  text-align: center;
+`;
+
+const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+`;
+
+const ModalImage = styled.img`
+  min-width: 100%;
+  min-height: 90vh;
+  object-fit: contain;
+  transform-origin: center;
+  transform: ${props => `scale(${props.scale}) translate(${props.x}px, ${props.y}px)`};
+  transition: none;
+  user-select: none;
+`;
+
 function LocationSection() {
   const mapRef = useRef(null);
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
   });
+  const [showModal, setShowModal] = useState(false);
+  const [scale, setScale] = useState(1);
+  const [isPinching, setIsPinching] = useState(false);
+  const lastDistance = useRef(null);
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+
+  const handleWheel = (e) => {
+    e.preventDefault();
+    const newScale = scale + (e.deltaY > 0 ? -0.1 : 0.1);
+    setScale(Math.min(Math.max(0.5, newScale), 5));
+  };
+
+  const handleTouchStart = (e) => {
+    if (e.touches.length === 2) {
+      setIsPinching(true);
+      const distance = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      lastDistance.current = distance;
+    } else if (e.touches.length === 1 && scale > 1) {
+      setIsDragging(true);
+      setDragStart({
+        x: e.touches[0].clientX - (position.x * scale),
+        y: e.touches[0].clientY - (position.y * scale)
+      });
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    if (isPinching && e.touches.length === 2) {
+      e.preventDefault();
+      const distance = Math.hypot(
+        e.touches[0].clientX - e.touches[1].clientX,
+        e.touches[0].clientY - e.touches[1].clientY
+      );
+      const delta = distance - lastDistance.current;
+      const newScale = scale + delta * 0.01;
+      setScale(Math.min(Math.max(0.5, newScale), 3));
+      lastDistance.current = distance;
+    } else if (isDragging && e.touches.length === 1 && scale > 1) {
+      const newX = (e.touches[0].clientX - dragStart.x) / scale;
+      const newY = (e.touches[0].clientY - dragStart.y) / scale;
+      
+      const maxX = (scale - 1) * window.innerWidth / (2 * scale);
+      const maxY = (scale - 1) * window.innerHeight / (2 * scale);
+      
+      setPosition({
+        x: Math.min(Math.max(newX, -maxX), maxX),
+        y: Math.min(Math.max(newY, -maxY), maxY)
+      });
+    }
+  };
+
+  const handleTouchEnd = () => {
+    setIsPinching(false);
+    lastDistance.current = null;
+  };
+
+  const handleMouseDown = (e) => {
+    if (scale > 1) {
+      e.preventDefault();
+      setIsDragging(true);
+      setDragStart({
+        x: e.clientX - (position.x * scale),
+        y: e.clientY - (position.y * scale)
+      });
+    }
+  };
+
+  const handleMouseMove = (e) => {
+    if (isDragging && scale > 1) {
+      const newX = (e.clientX - dragStart.x) / scale;
+      const newY = (e.clientY - dragStart.y) / scale;
+      
+      const maxX = (scale - 1) * window.innerWidth / (2 * scale);
+      const maxY = (scale - 1) * window.innerHeight / (2 * scale);
+      
+      setPosition({
+        x: Math.min(Math.max(newX, -maxX), maxX),
+        y: Math.min(Math.max(newY, -maxY), maxY)
+      });
+    }
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleModalClick = (e) => {
+    if (!isDragging) {  // 드래그 중이 아닐 때만 모달 닫기
+      setShowModal(false);
+      setScale(1);
+      setPosition({ x: 0, y: 0 });  // 위치 초기화
+    }
+  };
 
   useEffect(() => {
     const loadKakaoMap = () => {
@@ -188,6 +343,43 @@ function LocationSection() {
               티맵
             </MapButton>
           </div>
+
+          <div style={{ marginTop: '20px' }}>
+            <TrafficControlContainer>
+              <TrafficControlTitle>⚠️ 마라톤 교통 통제 안내</TrafficControlTitle>
+              <TrafficControlImage 
+                src={trafficControlImage} 
+                alt="교통 통제 안내" 
+                onClick={() => setShowModal(true)}
+                style={{ cursor: 'pointer' }}
+              />
+              <TrafficControlText>
+                3월 16일 서울마라톤으로 인해 <br />서울시내 교통 통제가 진행됩니다.<br />
+                우회도로를 이용해 주시기 바라며,<br /> 가급적 대중교통 이용을 부탁드립니다.
+              </TrafficControlText>
+            </TrafficControlContainer>
+          </div>
+
+          {showModal && (
+            <Modal onClick={handleModalClick}>
+              <ModalImage 
+                src={trafficControlImage} 
+                alt="교통 통제 안내" 
+                scale={scale}
+                x={position.x}
+                y={position.y}
+                onWheel={handleWheel}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseUp}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+                style={{ cursor: scale > 1 ? 'grab' : 'default' }}
+              />
+            </Modal>
+          )}
 
           <DirectionsContainer>
             <DirectionSection>

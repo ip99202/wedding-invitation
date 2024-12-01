@@ -138,20 +138,55 @@ const ModalImage = styled.img`
   touch-action: none;
 `;
 
-const CloseButton = styled.button`
+const ModalArrowButton = styled.button`
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: none;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.3);
   border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   color: white;
   font-size: 24px;
-  cursor: pointer;
-  z-index: 1001;
+  transition: background-color 0.3s;
+  z-index: 1002;
+  outline: none;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+  &:active {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &:focus {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  &.prev {
+    left: 20px;
+  }
+
+  &.next {
+    right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
 `;
 
 function GallerySection() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const { ref } = useInView({
     threshold: 0.1,
   });
@@ -196,6 +231,25 @@ function GallerySection() {
     ]
   };
 
+  const handleImageClick = (index) => {
+    setSelectedImage(images[index]);
+    setSelectedImageIndex(index);
+  };
+
+  const handlePrevImage = (e) => {
+    e.stopPropagation();
+    const newIndex = (selectedImageIndex - 1 + images.length) % images.length;
+    setSelectedImage(images[newIndex]);
+    setSelectedImageIndex(newIndex);
+  };
+
+  const handleNextImage = (e) => {
+    e.stopPropagation();
+    const newIndex = (selectedImageIndex + 1) % images.length;
+    setSelectedImage(images[newIndex]);
+    setSelectedImageIndex(newIndex);
+  };
+
   return (
     <Section>
       <Title>우리의 순간</Title>
@@ -204,7 +258,7 @@ function GallerySection() {
           {images.map((image, index) => (
             <ImageWrapper
               key={index}
-              onClick={() => setSelectedImage(image)}
+              onClick={() => handleImageClick(index)}
             >
               <Image 
                 src={image} 
@@ -223,14 +277,22 @@ function GallerySection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedImage(null)}
+            onClick={() => {
+              setSelectedImage(null);
+              setSelectedImageIndex(null);
+            }}
           >
-            <CloseButton onClick={() => setSelectedImage(null)}>×</CloseButton>
+            <ModalArrowButton className="prev" onClick={handlePrevImage}>
+              ←
+            </ModalArrowButton>
             <ModalImage 
               src={selectedImage} 
               alt="Selected gallery image"
               draggable="false"
             />
+            <ModalArrowButton className="next" onClick={handleNextImage}>
+              →
+            </ModalArrowButton>
           </Modal>
         )}
       </AnimatePresence>
