@@ -153,6 +153,7 @@ const ModalImage = styled.img`
   transform: ${props => `scale(${props.scale}) translate(${props.x}px, ${props.y}px)`};
   transition: none;
   user-select: none;
+  touch-action: none;
 `;
 
 function LocationSection() {
@@ -172,7 +173,7 @@ function LocationSection() {
   const handleWheel = (e) => {
     e.preventDefault();
     const newScale = scale + (e.deltaY > 0 ? -0.1 : 0.1);
-    setScale(Math.min(Math.max(0.5, newScale), 10));
+    setScale(Math.min(Math.max(1, newScale), 10));
   };
 
   const handleTouchStart = (e) => {
@@ -190,6 +191,7 @@ function LocationSection() {
         y: e.touches[0].clientY - (position.y * scale)
       });
     }
+    e.preventDefault();
   };
 
   const handleTouchMove = (e) => {
@@ -215,6 +217,7 @@ function LocationSection() {
         y: Math.min(Math.max(newY, -maxY), maxY)
       });
     }
+    e.preventDefault();
   };
 
   const handleTouchEnd = () => {
