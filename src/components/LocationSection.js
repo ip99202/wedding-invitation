@@ -257,20 +257,19 @@ function LocationSection() {
   };
 
   const handleModalOpen = () => {
-    setScrollY(window.scrollY);
+    setScrollY(window.scrollY); // 현재 스크롤 위치 저장
     setShowModal(true);
-    setScale(1);
-    const modalWidth = window.innerWidth;
-    const modalHeight = window.innerHeight;
-    setPosition({ x: (modalWidth - 100) / 2, y: (modalHeight - 90) / 2 });
-    document.body.style.overflow = 'hidden';
+    setScale(1); // 확대 비율 초기화
+    setPosition({ x: 0, y: 0 }); // 모달 열 때 위치 초기화
+    document.body.style.overflow = 'hidden'; // 모달 열 때 스크롤 방지
   };
 
   const handleModalClose = () => {
     setShowModal(false);
-    document.body.style.overflow = 'auto';
-    window.scrollTo(0, scrollY);
-    setScale(1);
+    document.body.style.overflow = 'auto'; // 모달 닫을 때 스크롤 복원
+    window.scrollTo(0, scrollY); // 저장된 위치로 스크롤 복원
+    setScale(1); // 확대 비율 초기화
+    setPosition({ x: 0, y: 0 }); // 모달 열 때 위치 초기화
   };
 
   const handleModalClick = (e) => {
