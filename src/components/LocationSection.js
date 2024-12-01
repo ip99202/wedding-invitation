@@ -169,6 +169,7 @@ function LocationSection() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isDragging, setIsDragging] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [scrollY, setScrollY] = useState(0);
 
   const handleWheel = (e) => {
     e.preventDefault();
@@ -203,7 +204,7 @@ function LocationSection() {
       );
       const delta = distance - lastDistance.current;
       const newScale = scale + delta * 0.01;
-      setScale(Math.min(Math.max(0.5, newScale), 3));
+      setScale(Math.min(Math.max(1, newScale), 10));
       lastDistance.current = distance;
     } else if (isDragging && e.touches.length === 1 && scale > 1) {
       const newX = (e.touches[0].clientX - dragStart.x) / scale;
@@ -255,11 +256,22 @@ function LocationSection() {
     setIsDragging(false);
   };
 
+  const handleModalOpen = () => {
+    setScrollY(window.scrollY);
+    setShowModal(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
+    document.body.style.overflow = 'auto';
+    window.scrollTo(0, scrollY);
+    setScale(1);
+  };
+
   const handleModalClick = (e) => {
-    if (!isDragging) {  // 드래그 중이 아닐 때만 모달 닫기
-      setShowModal(false);
-      setScale(1);
-      setPosition({ x: 0, y: 0 });  // 위치 초기화
+    if (!isDragging) {
+      handleModalClose();
     }
   };
 
@@ -353,7 +365,7 @@ function LocationSection() {
               <TrafficControlImage 
                 src={trafficControlImage} 
                 alt="교통 통제 안내" 
-                onClick={() => setShowModal(true)}
+                onClick={handleModalOpen}
                 style={{ cursor: 'pointer' }}
               />
               <TrafficControlText>
