@@ -11,7 +11,6 @@ const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
 
-  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
 
   * {
     box-sizing: border-box;
