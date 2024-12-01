@@ -31,13 +31,14 @@ const Title = styled.h2`
 
 const Message = styled.p`
   font-size: 16px;
-  font-weight: 300;
-  color: #666;
+  font-weight: 400;
+  color: #333;
   margin-bottom: 30px;
 `;
 
 const Names = styled.p`
-  font-size: 15px;
+  font-size: 17px;
+  font-weight: 500;
   margin-top: 40px;
   color: #333;
   letter-spacing: 4px;
@@ -91,8 +92,8 @@ function InvitationSection() {
         </Message>
         <FlowerImage />
         <Names>
-          <b>한상표 · 이혜영</b> <span style={{ fontSize: '13px', fontWeight: 'normal' }}>의 장남</span> <b>장희</b><br/>
-          <b>복진규 · 염연숙</b> <span style={{ fontSize: '13px', fontWeight: 'normal' }}>의 장녀</span> <b>유라</b>
+          한상표 · 이혜영 <span style={{ fontSize: '13px', fontWeight: '300' }}>의 장남</span> 장희<br/>
+          복진규 · 염연숙 <span style={{ fontSize: '13px', fontWeight: '300' }}>의 장녀</span> 유라
         </Names>
       </InvitationText>
     </Section>
