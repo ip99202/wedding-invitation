@@ -54,23 +54,6 @@ const Address = styled.p`
   font-family: 'Gabia Gosran', serif;
 `;
 
-const Button = styled.a`
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 10px;
-  border-radius: 25px;
-  background-color: #f3d4d4;
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-  transition: background-color 0.3s;
-  font-family: 'Gabia Gosran', serif;
-
-  &:hover {
-    background-color: #efc4c4;
-  }
-`;
-
 const DirectionsContainer = styled.div`
   margin-top: 40px;
   text-align: left;
