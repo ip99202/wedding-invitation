@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
@@ -53,6 +54,17 @@ const Letter = styled.span`
 `;
 
 function Loading() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(false);  // 3초 후 로딩 화면 사라짐
+    }, 3000); // 3000ms = 3초
+
+    return () => clearTimeout(timer);  // 컴포넌트 언마운트 시 타이머 정리
+  }, []);
+
+  if (!isVisible) return null;  // 로딩 화면이 사라지면 null 반환
 
   return (
     <LoadingWrapper>
