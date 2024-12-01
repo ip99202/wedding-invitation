@@ -26,7 +26,7 @@ const CopyrightText = styled.div`
   bottom: 10px;
   width: 100%;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
   color: rgba(255, 255, 255, 0.7);
 `;
 

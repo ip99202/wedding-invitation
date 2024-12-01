@@ -172,7 +172,7 @@ function LocationSection() {
   const handleWheel = (e) => {
     e.preventDefault();
     const newScale = scale + (e.deltaY > 0 ? -0.1 : 0.1);
-    setScale(Math.min(Math.max(0.5, newScale), 5));
+    setScale(Math.min(Math.max(0.5, newScale), 10));
   };
 
   const handleTouchStart = (e) => {
