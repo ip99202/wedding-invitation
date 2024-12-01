@@ -17,7 +17,6 @@ const Title = styled.h2`
   text-align: center;
   margin-bottom: 40px;
   color: #333;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Container = styled.div`
@@ -43,7 +42,6 @@ const VenueName = styled.h3`
   font-weight: 500;
   margin-bottom: 20px;
   color: #333;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Address = styled.p`
@@ -51,7 +49,6 @@ const Address = styled.p`
   color: #666;
   margin-bottom: 20px;
   line-height: 1.6;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const DirectionsContainer = styled.div`
@@ -68,7 +65,6 @@ const DirectionTitle = styled.h4`
   font-weight: 500;
   color: #333;
   margin-bottom: 15px;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const DirectionText = styled.p`
@@ -76,7 +72,6 @@ const DirectionText = styled.p`
   color: #666;
   line-height: 1.8;
   margin-bottom: 10px;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const MapButton = styled.a`
@@ -89,7 +84,6 @@ const MapButton = styled.a`
   text-decoration: none;
   font-size: 14px;
   transition: background-color 0.3s;
-  font-family: 'Gabia Gosran', serif;
   display: flex;  // flexbox 사용
   align-items: center;  // 수직 정렬
 `;

@@ -23,7 +23,6 @@ const Section = styled.section`
   background-color: #fdfdf5;
   overscroll-behavior: none;
   touch-action: pan-y;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Title = styled.h2`
@@ -32,7 +31,6 @@ const Title = styled.h2`
   text-align: center;
   margin-bottom: 40px;
   color: #333;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const SliderWrapper = styled.div`

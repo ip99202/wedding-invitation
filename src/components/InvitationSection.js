@@ -13,7 +13,6 @@ const Section = styled.section`
   align-items: center;
   text-align: center;
   background-color: #fdfdf5;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const InvitationText = styled(motion.div)`
@@ -21,7 +20,6 @@ const InvitationText = styled(motion.div)`
   margin: 0 auto;
   line-height: 2;
   word-break: keep-all;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Title = styled.h2`
@@ -29,7 +27,6 @@ const Title = styled.h2`
   font-weight: 300;
   margin-bottom: 40px;
   color: #333;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Message = styled.p`

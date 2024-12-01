@@ -7,7 +7,6 @@ const Section = styled.section`
   height: 700px;
   padding: 150px 20px;
   background-color: #fdfdf5;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Title = styled.h2`
@@ -16,7 +15,6 @@ const Title = styled.h2`
   text-align: center;
   margin-bottom: 40px;
   color: #333;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Container = styled(motion.div)`
@@ -33,13 +31,11 @@ const AccordionHeader = styled.div`
   align-items: center;
   cursor: pointer;
   margin-bottom: ${props => props.$isOpen ? '10px' : '0'};
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const AccordionContent = styled(motion.div)`
   background-color: #fff;
   overflow: hidden;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const AccountCard = styled.div`

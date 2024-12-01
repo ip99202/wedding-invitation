@@ -12,7 +12,6 @@ const Section = styled.section`
   align-items: center;
   text-align: center;
   background-color: #fff;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const DateContainer = styled(motion.div)`
@@ -26,7 +25,6 @@ const WeddingDate = styled.div`
   color: #333;
   margin-bottom: 8px;
   font-weight: 300;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const WeddingTime = styled.div`
@@ -34,7 +32,6 @@ const WeddingTime = styled.div`
   color: #666;
   margin-bottom: 40px;
   font-weight: 300;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Calendar = styled.div`
@@ -42,7 +39,6 @@ const Calendar = styled.div`
   padding: 20px 0;
   margin: 30px 0;
   width: 100%;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const WeekDays = styled.div`
@@ -51,7 +47,6 @@ const WeekDays = styled.div`
   margin-bottom: 15px;
   font-size: 14px;
   text-align: center;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Days = styled.div`
@@ -60,7 +55,6 @@ const Days = styled.div`
   gap: 10px 0;
   font-size: 15px;
   text-align: center;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const CalendarDay = styled.div`
@@ -119,7 +113,6 @@ const Message = styled.div`
   font-size: 14px;
   color: #666;
   margin-top: 20px;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 function DateSection() {

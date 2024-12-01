@@ -28,7 +28,6 @@ const CopyrightText = styled.div`
   text-align: center;
   font-size: 11px;
   color: rgba(255, 255, 255, 0.7);
-  font-family: 'Gabia Gosran', sans-serif;
 `;
 
 function FooterSection() {

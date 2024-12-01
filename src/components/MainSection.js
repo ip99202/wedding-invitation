@@ -50,7 +50,6 @@ const MainDate = styled.h1`
   font-weight: 800;
   letter-spacing: 2px;
   margin-bottom: 4px;
-  font-family: 'Gabia Gosran', serif;
   color: #006F46;
 `;
 
