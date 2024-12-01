@@ -41,7 +41,7 @@ const Message = styled.p`
 `;
 
 const Names = styled.p`
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 40px;
   line-height: 1.8;
   color: #333;
@@ -97,8 +97,8 @@ function InvitationSection() {
         </Message>
         <FlowerImage />
         <Names>
-          <span style={{ fontWeight: 'bold' }}>한상표  ·  이혜영</span> 의 <span style={{ fontSize: '13px' }}> 장남 </span>{' '}장희<br/>
-          <span style={{ fontWeight: 'bold' }}>복진규  ·  염연숙</span> 의 <span style={{ fontSize: '13px' }}> 장녀 </span>{' '}유라
+          <span style={{ fontWeight: 'bold' }}>한상표  ·  이혜영</span> 의 <span style={{ fontSize: '13px' }}> 장남 </span>장희<br/>
+          <span style={{ fontWeight: 'bold' }}>복진규  ·  염연숙</span> 의 <span style={{ fontSize: '13px' }}> 장녀 </span>유라
         </Names>
       </InvitationText>
     </Section>
