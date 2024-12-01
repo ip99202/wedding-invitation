@@ -7,14 +7,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // 이미지 import
-import img1 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-07 001.jpeg';
-import img2 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 002.jpeg';
+// import img1 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-07 001.jpeg';
+// import img2 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 002.jpeg';
+import img1 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 007.jpeg';
+import img2 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 008.jpeg';
 import img3 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 003.jpeg';
 import img4 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 004.jpeg';
 import img5 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 005.jpeg';
 import img6 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 006.jpeg';
-import img7 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 007.jpeg';
-import img8 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 008.jpeg';
 import img9 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 009.jpeg';
 import img10 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 010.jpeg';
 import img11 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 011.jpeg';
@@ -94,7 +94,7 @@ const ImageWrapper = styled(motion.div)`
   cursor: pointer;
   overflow: hidden;
   aspect-ratio: 3/4;
-  touch-action: none;
+  touch-action: pan-y;
 `;
 
 const Image = styled.img`
@@ -108,7 +108,7 @@ const Image = styled.img`
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-  touch-action: none;
+  touch-action: pan-y;
 `;
 
 const Modal = styled(motion.div)`
@@ -156,7 +156,7 @@ function GallerySection() {
     threshold: 0.1,
   });
 
-  const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10, img11, img12, img13];
+  const images = [img1, img2, img3, img4, img5, img6, img9, img10, img11, img12, img13];
 
   const NextArrow = (props) => {
     const { onClick } = props;

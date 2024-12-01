@@ -27,9 +27,10 @@ const Container = styled.div`
 const MapContainer = styled.div`
   width: 100%;
   height: 400px;
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
   border-radius: 10px;
   overflow: hidden;
+  touch-action: pan-y;  // 수직(y축) 스크롤만 허용
 `;
 
 const InfoContainer = styled(motion.div)`
@@ -114,7 +115,7 @@ function LocationSection() {
           const container = mapRef.current;
           const options = {
             center: new window.kakao.maps.LatLng(37.503962, 127.042825),
-            level: 3
+            level: 2,
           };
           
           const map = new window.kakao.maps.Map(container, options);
