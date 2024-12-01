@@ -259,6 +259,7 @@ function LocationSection() {
   const handleModalOpen = () => {
     setScrollY(window.scrollY);
     setShowModal(true);
+    setPosition({ x: 0, y: 0 });
     document.body.style.overflow = 'hidden';
   };
 
