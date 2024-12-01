@@ -259,7 +259,10 @@ function LocationSection() {
   const handleModalOpen = () => {
     setScrollY(window.scrollY);
     setShowModal(true);
-    setPosition({ x: 0, y: 0 });
+    setScale(1);
+    const modalWidth = window.innerWidth;
+    const modalHeight = window.innerHeight;
+    setPosition({ x: (modalWidth - 100) / 2, y: (modalHeight - 90) / 2 });
     document.body.style.overflow = 'hidden';
   };
 
