@@ -1,20 +1,24 @@
 {
   "files": {
     "main.css": "/wedding-invitation/static/css/main.38526810.css",
-    "main.js": "/wedding-invitation/static/js/main.c57e93c7.js",
-    "static/js/453.40063271.chunk.js": "/wedding-invitation/static/js/453.40063271.chunk.js",
-    "static/media/7E0A1211.jpeg": "/wedding-invitation/static/media/7E0A1211.661d993bd360f94e7a5f.jpeg",
-    "static/media/7E0A1012.jpeg": "/wedding-invitation/static/media/7E0A1012.be4b137cd72ce08b9d4d.jpeg",
-    "static/media/7E0A1675.jpeg": "/wedding-invitation/static/media/7E0A1675.e4318b4ccc1aa4357538.jpeg",
-    "static/media/7E0A0725.jpeg": "/wedding-invitation/static/media/7E0A0725.b4f7fa754aa9e839d934.jpeg",
-    "static/media/7E0A1150.jpeg": "/wedding-invitation/static/media/7E0A1150.2d3bd761246b012705d3.jpeg",
-    "static/media/7E0A1681.jpeg": "/wedding-invitation/static/media/7E0A1681.a6385ca91acae894b1b9.jpeg",
-    "static/media/7E0A1710.jpeg": "/wedding-invitation/static/media/7E0A1710.335b310727bfad8caa0d.jpeg",
-    "static/media/7E0A1468.jpeg": "/wedding-invitation/static/media/7E0A1468.75f76a79b060c3d44ecc.jpeg",
-    "static/media/7E0A1477.jpeg": "/wedding-invitation/static/media/7E0A1477.8e3c9cab134e8ab41e32.jpeg",
+    "main.js": "/wedding-invitation/static/js/main.2a7701b7.js",
+    "static/js/453.66636984.chunk.js": "/wedding-invitation/static/js/453.66636984.chunk.js",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 005.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 005.263a3f16e086f28a6d3a.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 002.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 002.1a3591d139ee5984c0f8.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 009.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 009.bfc34db185e41508754d.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 010.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 010.1ef5fc10f9a5e02317aa.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 013.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 013.65081eebb13d644a5cbb.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 011.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 011.ae7f5e9d68a62b6d41ef.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 007.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 007.1ba6cd45d7a8b367f52e.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 012.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 012.fa189c3d0f600a41fd25.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 006.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 006.16cb4ce926d4362368c4.jpeg",
     "static/media/7E0A1150-2.jpeg": "/wedding-invitation/static/media/7E0A1150-2.42f937d4f91f67dc0030.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 003.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 003.b3373f0b6d0e746b744c.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 004.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 004.1dbb95223d2474670783.jpeg",
     "static/media/GabiaGosran.ttf": "/wedding-invitation/static/media/GabiaGosran.c8d581dc63eae00a1456.ttf",
-    "static/media/IMG_00688-2.jpeg": "/wedding-invitation/static/media/IMG_00688-2.1619a9a61f8086331472.jpeg",
+    "static/media/IMG_00688-2.jpeg": "/wedding-invitation/static/media/IMG_00688-2.ff43caf4d611e3ae6c66.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 008.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 008.07c882beb70eb111e1e2.jpeg",
+    "static/media/KakaoTalk_Photo_2024-12-01-17-18-07 001.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-07 001.09d9d5effb9d689ef140.jpeg",
     "static/media/GabiaGosran.otf": "/wedding-invitation/static/media/GabiaGosran.94409784f9a094adf525.otf",
     "static/media/floral.png": "/wedding-invitation/static/media/floral.8ed5e614283d12c75898.png",
     "static/media/navermap.png": "/wedding-invitation/static/media/navermap.e300cc26e1efa29fe97c.png",
@@ -25,11 +29,11 @@
     "static/media/slick.woff": "/wedding-invitation/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/wedding-invitation/index.html",
     "main.38526810.css.map": "/wedding-invitation/static/css/main.38526810.css.map",
-    "main.c57e93c7.js.map": "/wedding-invitation/static/js/main.c57e93c7.js.map",
-    "453.40063271.chunk.js.map": "/wedding-invitation/static/js/453.40063271.chunk.js.map"
+    "main.2a7701b7.js.map": "/wedding-invitation/static/js/main.2a7701b7.js.map",
+    "453.66636984.chunk.js.map": "/wedding-invitation/static/js/453.66636984.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38526810.css",
-    "static/js/main.c57e93c7.js"
+    "static/js/main.2a7701b7.js"
   ]
 }
