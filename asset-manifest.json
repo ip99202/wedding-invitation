@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/wedding-invitation/static/css/main.38526810.css",
-    "main.js": "/wedding-invitation/static/js/main.d5283512.js",
-    "static/js/453.40063271.chunk.js": "/wedding-invitation/static/js/453.40063271.chunk.js",
+    "main.js": "/wedding-invitation/static/js/main.5c775668.js",
+    "static/js/453.66636984.chunk.js": "/wedding-invitation/static/js/453.66636984.chunk.js",
     "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 005.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 005.263a3f16e086f28a6d3a.jpeg",
     "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 009.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 009.bfc34db185e41508754d.jpeg",
     "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 010.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 010.1ef5fc10f9a5e02317aa.jpeg",
@@ -18,6 +18,7 @@
     "static/media/IMG_00688-2.jpeg": "/wedding-invitation/static/media/IMG_00688-2.ff43caf4d611e3ae6c66.jpeg",
     "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 008.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 008.07c882beb70eb111e1e2.jpeg",
     "static/media/GabiaGosran.otf": "/wedding-invitation/static/media/GabiaGosran.94409784f9a094adf525.otf",
+    "static/media/traffic_control.jpg": "/wedding-invitation/static/media/traffic_control.25b1b41fdfadd0b3c7ca.jpg",
     "static/media/floral.png": "/wedding-invitation/static/media/floral.8ed5e614283d12c75898.png",
     "static/media/navermap.png": "/wedding-invitation/static/media/navermap.e300cc26e1efa29fe97c.png",
     "static/media/kakaomap_basic.png": "/wedding-invitation/static/media/kakaomap_basic.b6bf66996c6904da94bf.png",
@@ -28,11 +29,11 @@
     "static/media/slick.woff": "/wedding-invitation/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/wedding-invitation/index.html",
     "main.38526810.css.map": "/wedding-invitation/static/css/main.38526810.css.map",
-    "main.d5283512.js.map": "/wedding-invitation/static/js/main.d5283512.js.map",
-    "453.40063271.chunk.js.map": "/wedding-invitation/static/js/453.40063271.chunk.js.map"
+    "main.5c775668.js.map": "/wedding-invitation/static/js/main.5c775668.js.map",
+    "453.66636984.chunk.js.map": "/wedding-invitation/static/js/453.66636984.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38526810.css",
-    "static/js/main.d5283512.js"
+    "static/js/main.5c775668.js"
   ]
 }
