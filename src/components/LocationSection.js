@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import kakaoMapLogo from '../public/images/kakaomap_basic.png';  // 카카오맵 로고 import
 import naverMapLogo from '../public/images/navermap.png';  // 네이버맵 로고 import
+import tmapLogo from '../public/images/tmap.png';  // 티맵 로고 import
 
 const Section = styled.section`
   height: 1350px;
@@ -79,13 +80,13 @@ const DirectionText = styled.p`
 
 const MapButton = styled.a`
   display: inline-block;
-  padding: 8px 15px;
+  padding: 8px 10px;
   margin: 5px;
   border-radius: 25px;
   background-color: #f0ede2;
   color: #333;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   transition: background-color 0.3s;
   display: flex;  // flexbox 사용
   align-items: center;  // 수직 정렬
@@ -161,7 +162,7 @@ function LocationSection() {
           </Address>
           
 
-          <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', marginLeft: '-20px', marginRight: '-20px' }}>
             <MapButton 
               href="https://map.kakao.com/link/to/상록아트홀,37.503887,127.042953" 
               target="_blank"
@@ -177,6 +178,14 @@ function LocationSection() {
             >
               <Logo src={naverMapLogo} alt="Naver Map" />
               네이버맵
+            </MapButton>
+            <MapButton 
+              href="tmap://route?goalname=상록아트홀&goalx=127.042953&goaly=37.503887" 
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Logo src={tmapLogo} alt="T Map" />
+              티맵
             </MapButton>
           </div>
 
