@@ -116,7 +116,7 @@ const Arrow = styled.span`
 
 function ContactSection() {
   const [openSection, setOpenSection] = useState(null);
-  const [copyMessage, setCopyMessage] = useState('');
+  const [copyMessage] = useState('');
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true
