@@ -81,8 +81,8 @@ const DirectionText = styled.p`
 
 const MapButton = styled.a`
   display: inline-block;
-  padding: 12px 24px;
-  margin: 10px;
+  padding: 8px 15px;
+  margin: 5px;
   border-radius: 25px;
   background-color: #f0ede2;
   color: #333;

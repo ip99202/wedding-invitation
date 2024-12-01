@@ -125,8 +125,8 @@ function ContactSection() {
   const handleCopy = async (text, name) => {
     try {
       await navigator.clipboard.writeText(text);
-      setCopyMessage(`계좌번호가 복사되었습니다`);
-      setTimeout(() => setCopyMessage(''), 2000);
+      // setCopyMessage(`계좌번호가 복사되었습니다`);
+      // setTimeout(() => setCopyMessage(''), 2000);
     } catch (err) {
       console.error('Failed to copy:', err);
     }
