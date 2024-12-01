@@ -191,7 +191,7 @@ function DateSection() {
         transition={{ duration: 1 }}
       >
         <WeddingDate>2025.03.16</WeddingDate>
-        <WeddingTime>일요일 오전 12시 20분</WeddingTime>
+        <WeddingTime>일요일 오후 12시 20분</WeddingTime>
         
         <Calendar>
           <WeekDays style={{ fontFamily: 'Gabia Gosran' }}>
