@@ -9,6 +9,7 @@ const Section = styled.section`
   height: 1350px;
   padding: 150px 20px;
   background-color: #fdfdf5;
+  touch-action: pan-y;  // 수직(y축) 스크롤만 허용
 `;
 
 const Title = styled.h2`
@@ -22,6 +23,7 @@ const Title = styled.h2`
 const Container = styled.div`
   max-width: 800px;
   margin: 0 auto;
+  touch-action: pan-y;  // 수직(y축) 스크롤만 허용
 `;
 
 const MapContainer = styled.div`
