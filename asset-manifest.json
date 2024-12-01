@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/wedding-invitation/static/css/main.38526810.css",
-    "main.js": "/wedding-invitation/static/js/main.155d7ae7.js",
+    "main.js": "/wedding-invitation/static/js/main.d930bce0.js",
     "static/js/453.40063271.chunk.js": "/wedding-invitation/static/js/453.40063271.chunk.js",
     "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 005.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 005.263a3f16e086f28a6d3a.jpeg",
     "static/media/KakaoTalk_Photo_2024-12-01-17-18-08 009.jpeg": "/wedding-invitation/static/media/KakaoTalk_Photo_2024-12-01-17-18-08 009.bfc34db185e41508754d.jpeg",
@@ -27,11 +27,11 @@
     "static/media/slick.woff": "/wedding-invitation/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/wedding-invitation/index.html",
     "main.38526810.css.map": "/wedding-invitation/static/css/main.38526810.css.map",
-    "main.155d7ae7.js.map": "/wedding-invitation/static/js/main.155d7ae7.js.map",
+    "main.d930bce0.js.map": "/wedding-invitation/static/js/main.d930bce0.js.map",
     "453.40063271.chunk.js.map": "/wedding-invitation/static/js/453.40063271.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.38526810.css",
-    "static/js/main.155d7ae7.js"
+    "static/js/main.d930bce0.js"
   ]
 }
