@@ -42,7 +42,6 @@ const Message = styled.p`
 
 const Names = styled.p`
   font-size: 15px;
-  font-weight: 800;
   margin-top: 40px;
   color: #333;
   font-family: 'Gabia Gosran';
@@ -97,8 +96,8 @@ function InvitationSection() {
         </Message>
         <FlowerImage />
         <Names>
-          한상표 · 이혜영 <span style={{ fontSize: '13px', fontWeight: 'normal' }}>의 장남</span> 장희<br/>
-          복진규 · 염연숙 <span style={{ fontSize: '13px', fontWeight: 'normal' }}>의 장녀</span> 유라
+          <b>한상표 · 이혜영</b> <span style={{ fontSize: '13px', fontWeight: 'normal' }}>의 장남</span> <b>장희</b><br/>
+          <b>복진규 · 염연숙</b> <span style={{ fontSize: '13px', fontWeight: 'normal' }}>의 장녀</span> <b>유라</b>
         </Names>
       </InvitationText>
     </Section>
