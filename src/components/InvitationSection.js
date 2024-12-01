@@ -37,14 +37,12 @@ const Message = styled.p`
   font-weight: 300;
   color: #666;
   margin-bottom: 30px;
-  font-family: 'Gabia Gosran', serif;
 `;
 
 const Names = styled.p`
   font-size: 15px;
   margin-top: 40px;
   color: #333;
-  font-family: 'Gabia Gosran';
   letter-spacing: 4px;
 `;
 
