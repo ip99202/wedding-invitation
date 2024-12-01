@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import floralImage from '../public/images/floral.png';
 
 const Section = styled.section`
   height: 800px;
@@ -45,6 +46,15 @@ const Names = styled.p`
   line-height: 1.8;
   color: #333;
   font-family: 'Gabia Gosran', serif;
+  letter-spacing: 4px;
+`;
+
+const FlowerImage = styled.div`
+  width: 50px;
+  height: 50px;
+  background: url(${floralImage}) no-repeat center center;
+  background-size: contain;
+  margin: 60px auto;
 `;
 
 const fadeInUpVariants = {
@@ -85,9 +95,10 @@ function InvitationSection() {
           귀한 걸음 하시어<br/>
           축복해 주시면 감사하겠습니다.
         </Message>
+        <FlowerImage />
         <Names>
-          한상표 · 이혜영<span style={{ fontWeight: 'normal' }}> 의 장남</span> 장희<br/>
-          복진규 · 염연숙<span style={{ fontWeight: 'normal' }}> 의 장녀</span> 유라
+          <span style={{ fontWeight: 'bold' }}>한상표  ·  이혜영</span> 의 <span style={{ fontSize: '13px' }}> 장남 </span>{' '}장희<br/>
+          <span style={{ fontWeight: 'bold' }}>복진규  ·  염연숙</span> 의 <span style={{ fontSize: '13px' }}> 장녀 </span>{' '}유라
         </Names>
       </InvitationText>
     </Section>

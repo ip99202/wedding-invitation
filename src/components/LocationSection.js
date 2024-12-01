@@ -2,9 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import kakaoMapLogo from '../public/images/kakaomap_basic.png';  // 카카오맵 로고 import
+import naverMapLogo from '../public/images/navermap.png';  // 네이버맵 로고 import
 
 const Section = styled.section`
-  height: 1300px;
+  height: 1350px;
   padding: 150px 20px;
   background-color: #fdfdf5;
 `;
@@ -94,17 +96,26 @@ const DirectionText = styled.p`
   font-family: 'Gabia Gosran', serif;
 `;
 
-const MapButton = styled(Button)`
-  background-color: #f8f8f8;
-  margin: 5px;
-  font-size: 13px;
-  padding: 8px 16px;
-  
-  &:hover {
-    background-color: #efefef;
-  }
+const MapButton = styled.a`
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 25px;
+  background-color: #f0ede2;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  font-family: 'Gabia Gosran', serif;
+  display: flex;  // flexbox 사용
+  align-items: center;  // 수직 정렬
 `;
 
+const Logo = styled.img`
+  width: 20px;  // 로고 크기 조정
+  height: 20px;
+  margin-right: 8px;  // 텍스트와의 간격
+`;
 
 function LocationSection() {
   const mapRef = useRef(null);
@@ -170,20 +181,22 @@ function LocationSection() {
           </Address>
           
 
-          <div>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
             <MapButton 
               href="https://map.kakao.com/link/to/상록아트홀,37.503887,127.042953" 
               target="_blank"
               rel="noopener noreferrer"
             >
-              카카오맵 길찾기
+              <Logo src={kakaoMapLogo} alt="Kakao Map" />
+              카카오맵
             </MapButton>
             <MapButton 
               href="https://map.naver.com/v5/search/서울%20강남구%20언주로%20508" 
               target="_blank"
               rel="noopener noreferrer"
             >
-              네이버맵 길찾기
+              <Logo src={naverMapLogo} alt="Naver Map" />
+              네이버맵
             </MapButton>
           </div>
 

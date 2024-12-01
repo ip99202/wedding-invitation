@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 const fadeIn = keyframes`
@@ -50,34 +49,26 @@ const TextWrapper = styled.div`
 const Letter = styled.span`
   animation: ${bounce} 0.5s ease-in-out;
   animation-delay: ${props => props.$delay}s;
+  font-family: ${props => props.$isEmoji ? '"Noto Color Emoji", -apple-system' : 'Gabia Gosran, serif'};
 `;
 
 function Loading() {
-  const [text] = useState('장희💛유라 결혼합니다');
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-    }, 3000); // 3초 후 로딩화면 사라짐
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (!isVisible) return null;
 
   return (
     <LoadingWrapper>
       <Heart />
       <TextWrapper>
-        {text.split('').map((letter, index) => (
-          <Letter 
-            key={index} 
-            $delay={index * 0.1}
-          >
-            {letter}
-          </Letter>
-        ))}
+        <Letter $delay={0 * 0.1}>장</Letter>
+        <Letter $delay={1 * 0.1}>희</Letter>
+        <p><Letter $delay={2 * 0.1}>&#128155;</Letter></p>
+        <Letter $delay={3 * 0.1}>유</Letter>
+        <Letter $delay={4 * 0.1}>라</Letter>
+        <Letter $delay={5 * 0.1}> </Letter>
+        <Letter $delay={6 * 0.1}>결</Letter>
+        <Letter $delay={7 * 0.1}>혼</Letter>
+        <Letter $delay={8 * 0.1}>합</Letter>
+        <Letter $delay={9 * 0.1}>니</Letter>
+        <Letter $delay={10 * 0.1}>다</Letter>
       </TextWrapper>
     </LoadingWrapper>
   );
