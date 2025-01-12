@@ -151,7 +151,7 @@ const ModalArrowButton = styled.button`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: white;
+  color: #006F46;
   font-size: 24px;
   transition: background-color 0.3s;
   z-index: 1002;
@@ -181,6 +181,28 @@ const ModalArrowButton = styled.button`
     width: 30px;
     height: 30px;
     font-size: 18px;
+  }
+`;
+
+const CloseButton = styled.button`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1002;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
   }
 `;
 
@@ -282,6 +304,10 @@ function GallerySection() {
               setSelectedImageIndex(null);
             }}
           >
+            <CloseButton onClick={() => {
+              setSelectedImage(null);
+              setSelectedImageIndex(null);
+            }}>×</CloseButton>
             <ModalArrowButton className="prev" onClick={handlePrevImage}>
               ←
             </ModalArrowButton>

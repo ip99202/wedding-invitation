@@ -156,6 +156,28 @@ const ModalImage = styled.img`
   touch-action: none;
 `;
 
+const CloseButton = styled.button`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.7);
+  }
+`;
+
 function LocationSection() {
   const mapRef = useRef(null);
   const [ref, inView] = useInView({
@@ -372,6 +394,7 @@ function LocationSection() {
                 style={{ cursor: 'pointer' }}
               />
               <TrafficControlText>
+                <strong style={{ fontSize: '12px' }}>이미지를 클릭하여 확대할 수 있습니다.</strong><br /><br />
                 3월 16일 서울마라톤으로 인해 <br />서울시내 교통 통제가 진행됩니다.<br />
                 우회도로를 이용해 주시기 바라며,<br /> 가급적 대중교통 이용을 부탁드립니다.
               </TrafficControlText>
@@ -380,6 +403,7 @@ function LocationSection() {
 
           {showModal && (
             <Modal onClick={handleModalClick}>
+              <CloseButton onClick={handleModalClose}>×</CloseButton>
               <ModalImage 
                 src={trafficControlImage} 
                 alt="교통 통제 안내" 

@@ -26,14 +26,14 @@ const CopyrightText = styled.div`
   bottom: 10px;
   width: 100%;
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.7);
 `;
 
 function FooterSection() {
   return (
     <FooterContainer>
-      <CopyrightText>© 2024 HAN JANG HEE.</CopyrightText>
+      <CopyrightText>© 2025 HAN JANG HEE.</CopyrightText>
     </FooterContainer>
   );
 }
