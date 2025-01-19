@@ -17,7 +17,7 @@ import img5 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 005.jpeg'
 import img6 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 006.jpeg';
 import img9 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 009.jpeg';
 import img10 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 010.jpeg';
-import img12 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 011.jpeg';
+// import img12 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 011.jpeg';
 import img11 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 012.jpeg';
 import img13 from '../public/images/KakaoTalk_Photo_2024-12-01-17-18-08 013.jpeg';
 
@@ -213,7 +213,7 @@ function GallerySection() {
     threshold: 0.1,
   });
 
-  const images = [img1, img2, img3, img4, img5, img6, img9, img10, img11, img12, img13];
+  const images = [img1, img2, img3, img4, img5, img6, img9, img10, img11, img13];
 
   const NextArrow = (props) => {
     const { onClick } = props;

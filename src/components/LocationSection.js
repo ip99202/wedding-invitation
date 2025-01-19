@@ -340,6 +340,8 @@ function LocationSection() {
     };
   }, []);
 
+  const isIOS = /iPhone|iPad|iPod|Mac|iOS/.test(navigator.userAgent);
+
   return (
     <Section>
       <Title>오시는 길</Title>
@@ -367,8 +369,11 @@ function LocationSection() {
               카카오맵
             </MapButton>
             <MapButton 
-              href="https://map.naver.com/v5/search/서울%20강남구%20언주로%20508" 
-              target="_blank"
+              href={isIOS
+                ? "nmap://place?lat=37.503887&lng=127.042953&name=상록아트홀"
+                : "https://map.naver.com/v5/search/서울%20강남구%20언주로%20508"
+              }
+              target="_self"
               rel="noopener noreferrer"
             >
               <Logo src={naverMapLogo} alt="Naver Map" />
