@@ -401,7 +401,7 @@ function LocationSection() {
               <TrafficControlText>
                 <div style={{ fontSize: '12px' }}>이미지를 클릭하여 확대할 수 있습니다.</div><br />
                 3월 16일 서울마라톤으로 인해 <br />서울시내 교통 통제가 진행됩니다.<br />
-                우회도로를 이용해 주시기 바랍니다.
+                위 사진 참고하시어 우회도로 이용 <br />및 통행에 참고하시기 바랍니다.
               </TrafficControlText>
             </TrafficControlContainer>
           </div>
