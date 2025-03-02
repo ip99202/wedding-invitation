@@ -129,7 +129,7 @@ function ContactSection() {
 
   const accounts = {
     groom: [
-      { name: '신랑 한장희', account: '신한은행 110-332-962892' },
+      { name: '신랑 한장희', account: '하나은행 134-910460-14507' },
       { name: '신랑측 아버지 한상표', account: '신한은행 110-508-466893' },
       { name: '신랑측 어머니 이혜영', account: '신한은행 521-04-161097' },
     ],
