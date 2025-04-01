@@ -92,8 +92,8 @@ function InvitationSection() {
         </Message>
         <FlowerImage />
         <Names>
-          한상표 · 이혜영 <span style={{ fontSize: '13px', fontWeight: '300' }}>의 장남</span> 장희<br/>
-          복진규 · 염연숙 <span style={{ fontSize: '13px', fontWeight: '300' }}>의 장녀</span> 유라
+          김철수 · 김영희 <span style={{ fontSize: '13px', fontWeight: '300' }}>의 장남</span> 철수<br/>
+          김철수 · 김영희 <span style={{ fontSize: '13px', fontWeight: '300' }}>의 장녀</span> 영희
         </Names>
       </InvitationText>
     </Section>

@@ -110,7 +110,7 @@ function MainSection() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
       >
-        <Names>한장희  ·  복유라</Names>
+        <Names>김철수  ·  김영희</Names>
         <DateTime>2025년 3월 16일 일요일 오후 12시 20분</DateTime>
         <Location>상록아트홀 5F, 아트홀</Location>
       </InfoContainer>
