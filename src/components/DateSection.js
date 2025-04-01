@@ -234,7 +234,7 @@ function DateSection() {
               <div className="label" style={{ fontFamily: 'Gabia Gosran'}}>SEC</div>
             </CountdownItem>
           </CountdownGrid>
-          <Message>장희 💚 유라의 결혼식이 <span style={{ color: 'green' }}>{countdown.days}</span>일 남았습니다.</Message>
+          <Message>철수 💚 영희의 결혼식이 <span style={{ color: 'green' }}>{countdown.days}</span>일 남았습니다.</Message>
         </CountdownContainer>
       </DateContainer>
     </Section>
